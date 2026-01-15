@@ -22,9 +22,10 @@ abstract class Persona {
         return edad;
     }
 
-    public void presentarse (String nombre, String dni, Int edad) {
-        System.out.printf("Hola, mi nombre es %s, con DNI %s y tengo %d años");
-    }
+    @Override
+        public String toString() {
+            return String.format("Datos de la persona: %s, %s, %d", this.nombre, this.dni, this.edad);
+        }
 
 
 }
