@@ -5,4 +5,14 @@ public class Manager extends Persona {
         super (dni, nombre, edad);
         this.personasACargo = personasACargo;
     }
+
+    public int getPersonasACargo() {
+        return personasACargo;
+    }
+
+    public void setPersonasACargo(personasACargo) {
+        this.personasACargo = personasACargo;
+    }
+
+    
 }
