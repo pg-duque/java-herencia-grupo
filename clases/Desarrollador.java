@@ -18,7 +18,7 @@ public class Desarrollador extends Empleado {
 
     @Override
     public String mostrar(){
-        return System.out.printf("El desarrollador: %s" + super.getNombre() + " con DNI: %s" + super.getDni() +
-         " trabaja con el lenguaje: %s" + this.lenguajePrincipal + " su salario es: %d" + calcucalcularSalario() );
+        return System.out.printf("El desarrollador: " + super.getNombre() + ", con DNI: " + super.getDni() +
+         ", trabaja con el lenguaje: " + this.lenguajePrincipal + "y su salario es: " + calcucalcularSalario() );
     }
 }
