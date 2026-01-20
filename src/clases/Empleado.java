@@ -1,4 +1,8 @@
-public class Empleado extends Persona{
+package clases;
+
+import clases.Persona;
+
+public class Empleado extends Persona {
 
     protected double salario_base;
     protected int antiguedadAnios;
@@ -30,7 +34,7 @@ public class Empleado extends Persona{
         return salario_base + bono;
     }
 
-    @override
+    @Override
     public String toString(){
         return super.toString() + ", Salario Base: " + salario_base + ", Antiguedad (años): " + antiguedadAnios;
     }

@@ -1,10 +1,12 @@
+package clases;
+
 abstract class Persona {
 
     private String dni;
     private String nombre;
-    private Int edad;
+    private int edad;
 
-    public Persona(String dni, String nombre, String edad) {
+    public Persona(String dni, String nombre, int edad) {
         this.dni = dni;
         this.nombre = nombre;
         this.edad = edad;
@@ -18,7 +20,7 @@ abstract class Persona {
         return nombre;
     }
 
-    public Int getEdad () {
+    public int getEdad () {
         return edad;
     }
 
