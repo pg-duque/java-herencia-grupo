@@ -1,7 +1,6 @@
 package clases;
 
 import java.time.LocalDate;
-import java.util.UUID;
 
 public class Empleado extends Persona {
 
@@ -14,8 +13,8 @@ public class Empleado extends Persona {
     protected LocalDate fecha_contratacion;
 
 
-    public Empleado(String dni, String nombre, int edad, double salario_base, int antiguedadAnios, String idEmpleado, String departamento, double jornadaHoraria, boolean activo,  LocalDate fecha_contratacion) {
-        super(dni, nombre, edad);
+    public Empleado(String dni, String nombre, int edad, String fechaNacimiento, String email, String telefono,double salario_base, int antiguedadAnios, String idEmpleado, String departamento, double jornadaHoraria, boolean activo,  LocalDate fecha_contratacion) {
+        super(dni, nombre, edad, fechaNacimiento, email, telefono);
         this.salario_base = salario_base;
         this.antiguedadAnios = antiguedadAnios;
         this.idEmpleado = idEmpleado;
