@@ -2,11 +2,11 @@ package clases;
 
 import clases.Persona;
 
-public class Manager extends Persona {
+public class Manager extends Empleado {
     protected int personasACargo;
 
-    public Manager (String dni, String nombre, int edad, int personasACargo) {
-        super (dni, nombre, edad);
+    public Manager (String dni, String nombre, int edad, double salario, int antiguedad, int personasACargo) {
+        super (dni, nombre, edad, salario, antiguedad);
         this.personasACargo = personasACargo;
     }
 
