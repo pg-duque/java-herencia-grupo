@@ -3,6 +3,8 @@ import clases.Empleado;
 import clases.Manager;
 import clases.Departamento;
 import clases.Proyecto;
+import recursos.MyScanner;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -10,46 +12,47 @@ public class Main {
     private static ArrayList<Empleado> empleados = new ArrayList<>();
     private static ArrayList<Departamento> departamentos = new ArrayList<>();
     private static ArrayList<Proyecto> proyectos = new ArrayList<>();
-    private static Scanner scanner = new Scanner(System.in);
+    private static MyScanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
         // Inicialización de datos de prueba
         inicializarDatos();
+    }
+        public static void menu() {
+            boolean ejecutar = true;
+            while (ejecutar) {
+                mostrarMenuPrincipal();
+                int opcion = leerOpcion();
 
-        boolean ejecutar = true;
-        while (ejecutar) {
-            mostrarMenuPrincipal();
-            int opcion = leerOpcion();
-            
-            switch (opcion) {
-                case 1:
-                    menuContratacion();
-                    break;
-                case 2:
-                    menuFichaje();
-                    break;
-                case 3:
-                    menuNominas();
-                    break;
-                case 4:
-                    menuProyectos();
-                    break;
-                case 5:
-                    menuInformes();
-                    break;
-                case 6:
-                    System.out.println("¡Hasta luego!");
-                    ejecutar = false;
-                    break;
-                default:
-                    System.out.println("Opción no válida. Intenta de nuevo.");
-            }
-            if (ejecutar) {
-                System.out.println("\nPresiona ENTER para continuar...");
-                scanner.nextLine();
+                switch (opcion) {
+                    case 1:
+                        menuContratacion();
+                        break;
+                    case 2:
+                        menuFichaje();
+                        break;
+                    case 3:
+                        menuNominas();
+                        break;
+                    case 4:
+                        menuProyectos();
+                        break;
+                    case 5:
+                        menuInformes();
+                        break;
+                    case 6:
+                        System.out.println("¡Hasta luego!");
+                        ejecutar = false;
+                        break;
+                    default:
+                        System.out.println("Opción no válida. Intenta de nuevo.");
+                }
+                if (ejecutar) {
+                    System.out.println("\nPresiona ENTER para continuar...");
+                    scanner.nextLine();
+                }
             }
         }
-    }
 
     private static void inicializarDatos() {
         Empleado empleado = new Empleado("12345678A", "Juan Perez", 30, 2000, "peruano@gmail.com");

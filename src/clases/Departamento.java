@@ -7,10 +7,13 @@ public class Departamento {
     public String nombre;
     public String jefeDepartamento;
     public double presupuestoAnual;
-    public List<String> empleados;
+    public ArrayList<String> empleados;
 
     public Departamento() {
         empleados = new ArrayList<>();
+        this.nombre = nombre;
+        this.jefeDepartamento = jefeDepartamento;
+        this.presupuestoAnual = presupuestoAnual;
     }
 
     public void agregarEmpleado(String idEmpleado) {
@@ -25,7 +28,7 @@ public class Departamento {
         return total;
     }
 
-    public List<String> listarEmpleados() {
+    public ArrayList<String> listarEmpleados() {
         return empleados;
     }
 }
