@@ -17,6 +17,17 @@ public class Fichaje {
         this.tipoFichaje = tipoFichaje;
     }
 
+    public Fichaje(int idFichaje, int idEmpleado, LocalDate fechaHoraEntrada, TipoFichaje tipoFichaje) {
+        this.idFichaje = idFichaje;
+        this.idEmpleado = idEmpleado;
+        this.fechaHoraEntrada = fechaHoraEntrada;
+        this.tipoFichaje = tipoFichaje;
+    }
+
+    public Fichaje() {
+
+    }
+
     public int getIdFichaje() {
         return idFichaje;
     }
