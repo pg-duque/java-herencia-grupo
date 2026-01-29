@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Empleado empleado = new Empleado("12345678A", "Juan Perez", 30, 2000.0, 5);
+        Empleado empleado = new Empleado("12345678A", "Juan Perez", 30, 2000, "peruano@gmail.com");
         Desarrollador desarrollador = new Desarrollador("87654321B", "Ana Gomez", 28, 2500.0, 3, "Java");
         Manager manager = new Manager("11223344C", "Carlos Ruiz", 35, 55000, 25, 120);
 

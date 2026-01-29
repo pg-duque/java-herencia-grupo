@@ -1,7 +1,5 @@
 package clases;
 
-import clases.Persona;
-
 public class Manager extends Empleado {
     protected int personasACargo;
 
