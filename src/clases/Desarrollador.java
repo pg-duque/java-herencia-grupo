@@ -1,6 +1,7 @@
 package clases;
 
 import clases.Empleado;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -10,8 +11,8 @@ public class Desarrollador extends Empleado {
     private List<String> tecnologias;
     private double horasExtra;
 
-    public Desarrollador(String dni, String nombre, int edad, double salario_base, int antiguedadAnios, String lenguajePrincipal, String nivel){
-        super(dni, nombre, edad, salario_base, antiguedadAnios);
+    public Desarrollador(String dni, String nombre, int edad, String fechaNacimiento, String email, String telefono, double salario_base, int antiguedadAnios, String idEmpleado, String departamento, double jornadaHoraria, boolean activo, LocalDate fecha_contratacion, String lenguajePrincipal, String nivel) {
+        super(dni, nombre, edad, fechaNacimiento, email, telefono, salario_base, antiguedadAnios, idEmpleado, departamento, jornadaHoraria, activo, fecha_contratacion);
         this.lenguajePrincipal = lenguajePrincipal;
         this.nivel = nivel;
         this.tecnologias = new ArrayList<>();
@@ -20,7 +21,7 @@ public class Desarrollador extends Empleado {
 
     public String getLenguajePrincipal(){return lenguajePrincipal; }
 
-    public void setLenguajePrinipal(){this.lenguajePrincipal = lenguajePrincipal;}
+    public void setLenguajePrinipal(String lenguajePrincipal){this.lenguajePrincipal = lenguajePrincipal;}
 
     public String getNivel(){return nivel; }
 
@@ -55,8 +56,8 @@ public class Desarrollador extends Empleado {
 
     @Override
     public String mostrar(){
-        return System.out.prinln("El desarrollador: " + super.getNombre() + " con DNI: " + super.getDni() +
-         " trabaja con el lenguaje: " + this.lenguajePrincipal + " nivel: " + this.nivel + 
-         " su salario es: " + calcularSalario() );
+        return "El desarrollador: " + super.getNombre() + " con DNI: " + super.getDni() +
+         " trabaja con el lenguaje: " + this.lenguajePrincipal + " nivel: " + this.nivel +
+         " su salario es: " + calcularSalario();
     }
 }
